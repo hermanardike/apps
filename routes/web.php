@@ -21,3 +21,8 @@ Route::get('/', fn() => view('home'));
 Route::get('/gallery', fn() => view('gallery'));
 Route::get('/contact', fn() => view('contact'));
 
+// MAHASISWA
+Route::get('/mahasiswa', fn() => view('users.mahasiswa.index'))->name('mahasiswa');
+Route::get('/dosen', fn() => view('users.dosen.index'))->name('dosen');
+Route::get('/tendik', fn() => view('users.tendik.index'))->name('tendik');
+

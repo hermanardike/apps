@@ -16,13 +16,13 @@
             </a>
             <ul class="submenu ">
                 <li class="submenu-item ">
-                    <a href="component-alert.html">Mahasiswa</a>
+                    <a href="{{route('mahasiswa')}}">Mahasiswa</a>
                 </li>
                 <li class="submenu-item ">
-                    <a href="component-badge.html">Dosen</a>
+                    <a href="{{route('dosen')}}">Dosen</a>
                 </li>
                 <li class="submenu-item ">
-                    <a href="component-breadcrumb.html">Tendik</a>
+                    <a href="{{route('tendik')}}">Tendik</a>
                 </li>
             </ul>
         </li>

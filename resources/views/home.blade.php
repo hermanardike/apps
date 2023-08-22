@@ -1,5 +1,5 @@
-@extends('layouts.app')
-@section('content')
+<x-app-layout>
+
 <div class="page-heading">
     <h3>DASHBOARD ADMIN</h3>
 </div>
@@ -116,4 +116,5 @@
         </div>
     </section>
 </div>
-@endsection
+
+</x-app-layout>

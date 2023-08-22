@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - Mazer Admin Dashboard</title>
+    <title>{{ $title ?? 'Dashboard Radius' }}</title>
 
     <link rel="stylesheet" href="{{ asset('dist/assets/css/main/app.css')}}">
     <link rel="stylesheet" href="{{ asset('dist/assets/css/main/app-dark.css')}}">
@@ -11,6 +11,9 @@
     <link rel="shortcut icon" href=" {{asset('dist/assets/images/logo/favicon.png')}}" type="image/png">
 
     <link rel="stylesheet" href="{{ asset('dist/assets/css/shared/iconly.css') }}">
+
+    <link rel="stylesheet" href="{{asset('dist/assets/extensions/simple-datatables/style.css')}}">
+    <link rel="stylesheet" href="{{asset('dist/assets/css/pages/simple-datatables.css')}}">
 
 </head>
 
@@ -36,7 +39,11 @@
                     </div>
                 </div>
             </div>
-            @include('layouts.navigation')
+
+
+            <x-navigation/>
+
+
         </div>
     </div>
     <div id="main">
@@ -46,7 +53,7 @@
             </a>
         </header>
 
-       @yield('content')
+        {{ $slot }}
 
 
         <footer>
@@ -62,12 +69,16 @@
         </footer>
     </div>
 </div>
+
 <script src="{{asset('dist/assets/js/bootstrap.js')}}"></script>
 <script src="{{asset('dist/assets/js/app.js')}}"></script>
 
 <!-- Need: Apexcharts -->
 <script src="{{asset('dist/assets/extensions/apexcharts/apexcharts.min.js')}}"></script>
 <script src="{{asset('dist/assets/js/pages/dashboard.js')}}"></script>
+
+<script src="{{asset('dist/assets/extensions/simple-datatables/umd/simple-datatables.js')}}"></script>
+<script src="{{asset('dist/assets/js/pages/simple-datatables.js')}}"></script>
 
 </body>
 
