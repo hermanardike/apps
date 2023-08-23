@@ -3,27 +3,23 @@
         <li class="sidebar-title">Menu</li>
         <li
             class="sidebar-item active ">
-            <a href="index.html" class='sidebar-link'>
+            <a href="/" class='sidebar-link'>
                 <i class="bi bi-grid-fill"></i>
                 <span>Dashboard</span>
             </a>
         </li>
         <li
             class="sidebar-item  has-sub">
-            <a href="#" class='sidebar-link'>
+            <a href="/" class='sidebar-link'>
                 <i class="bi bi-stack"></i>
                 <span>USER RADIUS</span>
             </a>
             <ul class="submenu ">
                 <li class="submenu-item ">
-                    <a href="{{route('mahasiswa')}}">Mahasiswa</a>
+                    <a href="{{route('users')}}">RADIUS CLIENT</a>
                 </li>
-                <li class="submenu-item ">
-                    <a href="{{route('dosen')}}">Dosen</a>
-                </li>
-                <li class="submenu-item ">
-                    <a href="{{route('tendik')}}">Tendik</a>
-                </li>
+
+
             </ul>
         </li>
         <li

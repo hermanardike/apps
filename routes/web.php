@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,12 +20,10 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 
-Route::get('/', fn() => view('home'));
-Route::get('/gallery', fn() => view('gallery'));
-Route::get('/contact', fn() => view('contact'));
+Route::get('/', HomeController::class);
+Route::get('/users', [UserController::class, 'index'])->name('users');
+Route::get('/users/show', [UserController::class, 'show']);
 
-// MAHASISWA
-Route::get('/mahasiswa', fn() => view('users.mahasiswa.index'))->name('mahasiswa');
-Route::get('/dosen', fn() => view('users.dosen.index'))->name('dosen');
-Route::get('/tendik', fn() => view('users.tendik.index'))->name('tendik');
+
+
 

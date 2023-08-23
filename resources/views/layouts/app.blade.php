@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $title ?? 'Dashboard Radius' }}</title>
+    <title>{{ $title }}</title>
 
     <link rel="stylesheet" href="{{ asset('dist/assets/css/main/app.css')}}">
     <link rel="stylesheet" href="{{ asset('dist/assets/css/main/app-dark.css')}}">
@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="{{asset('dist/assets/extensions/simple-datatables/style.css')}}">
     <link rel="stylesheet" href="{{asset('dist/assets/css/pages/simple-datatables.css')}}">
+    <link rel="stylesheet" href="{{asset('dist/assets/css/addon/dark-profile.css')}}">
 
 </head>
 
@@ -56,19 +57,21 @@
         {{ $slot }}
 
 
-        <footer>
-            <div class="footer clearfix mb-0 text-muted">
-                <div class="float-start">
-                    <p>2021 &copy; Mazer</p>
-                </div>
-                <div class="float-end">
-                    <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
-                            href="https://saugi.me">Saugi</a></p>
-                </div>
-            </div>
-        </footer>
+{{--        <footer class="mt-xxl-5">--}}
+{{--            <div class="  footer clearfix mb-0 text-muted" >--}}
+{{--                <div class="float-start">--}}
+{{--                    <p>2021 &copy; Mazer</p>--}}
+{{--                </div>--}}
+{{--                <div class="float-end">--}}
+{{--                    <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a--}}
+{{--                            href="https://saugi.me">Saugi</a></p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </footer>--}}
     </div>
+
 </div>
+
 
 <script src="{{asset('dist/assets/js/bootstrap.js')}}"></script>
 <script src="{{asset('dist/assets/js/app.js')}}"></script>
@@ -83,5 +86,9 @@
 </body>
 
 </html>
+
+
+
+
 
 
