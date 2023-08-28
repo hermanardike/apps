@@ -57,7 +57,7 @@
                                                     <div class="user-avatar">
                                                         <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Maxwell Admin">
                                                     </div>
-                                                    <h5 class="user-name">Yuki Hayashi</h5>
+                                                    <h5 class="user-name">{{$user}}</h5>
                                                     <h6 class="user-email">yuki@Maxwell.com</h6>
                                                 </div>
                                                 <div class="about">
@@ -78,19 +78,20 @@
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
                                                         <label for="fullName">Full Name</label>
-                                                        <input type="text" class="form-control" id="fullName" placeholder="Enter full name">
+
+                                                        <input type="text"  value="Full Name here " class="form-control" id="fullName" placeholder="Enter full name"  readonly disabled>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
                                                         <label for="eMail">Email</label>
-                                                        <input type="email" class="form-control" id="eMail" placeholder="Enter email ID">
+                                                        <input type="email" class="form-control" id="eMail" placeholder="Enter email ID" readonly disabled>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
                                                         <label for="phone">Phone</label>
-                                                        <input type="text" class="form-control" id="phone" placeholder="Enter phone number">
+                                                        <input type="text" class="form-control" id="phone" placeholder="Enter phone number" readonly disabled>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
@@ -120,6 +121,18 @@
                                                     <div class="form-group">
                                                         <label for="sTate">State</label>
                                                         <input type="text" class="form-control" id="sTate" placeholder="Enter State">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                    <div class="form-group">
+                                                        <label for="zIp">Zip Code</label>
+                                                        <input type="text" class="form-control" id="zIp" placeholder="Zip Code">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                    <div class="form-group">
+                                                        <label for="zIp">Zip Code</label>
+                                                        <input type="text" class="form-control" id="zIp" placeholder="Zip Code">
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">

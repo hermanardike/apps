@@ -22,7 +22,7 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', HomeController::class);
 Route::get('/users', [UserController::class, 'index'])->name('users');
-Route::get('/users/show', [UserController::class, 'show']);
+Route::get('/users/{user}', [UserController::class, 'show']);
 
 
 

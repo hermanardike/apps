@@ -121,33 +121,28 @@
                 <div class="card-body">
                     <table class="table table-striped" id="table1">
                         <thead>
-
                         <tr>
-                            <th>Name</th>
+                            <th>No</th>
+                            <th>Username</th>
                             <th>Email</th>
-                            <th>Phone</th>
                             <th>Status</th>
+                            <th>Action</th>
                         </tr>
                         </thead>
                         <tbody>
+                        @foreach($user as $index => $users)
                         <tr>
-                            <td>kosong</td>
-                            <td>kosong</td>
-                            <td>kosong</td>
+                            <td>{{$index + 1}}</td>
+                            <td>{{$users->username}}</td>
+                            <td>{{$users->email}}</td>
+                            <td>{{$users->id_status}}</td>
                             <td>
-                                <span class="badge bg-success">Active</span>
+                                <span class="badge bg-success">edit</span>
                             </td>
                         </tr>
-
-
-                            <tr>
-                                <td colspan="4">
-                                    <div class="text-center">Datanya Kosong Bos.</div>
-                                </td>
-                            </tr>
+                        @endforeach
 
                         </tbody>
-
                     </table>
                 </div>
             </div>
