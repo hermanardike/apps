@@ -57,13 +57,16 @@
                                                     <div class="user-avatar">
                                                         <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Maxwell Admin">
                                                     </div>
-                                                    <h5 class="user-name">{{$user}}</h5>
-                                                    <h6 class="user-email">yuki@Maxwell.com</h6>
+                                                    <h5 class="user-name">Nama Mahasiswa</h5>
+                                                    <h6 class="user-email">npm mahasiswa</h6>
+                                                    <h6 class="user-email">Create At user</h6>
                                                 </div>
                                                 <div class="about">
-                                                    <h5 class="mb-2 text-primary">About</h5>
+                                                    <h5 class="mb-2 text-primary">Alamat Pengguna</h5>
                                                     <p>I'm Yuki. Full Stack Designer I enjoy creating user-centric, delightful and human experiences.</p>
                                                 </div>
+
+
                                             </div>
                                         </div>
                                     </div>
@@ -77,70 +80,61 @@
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
-                                                        <label for="fullName">Full Name</label>
+                                                        <label for="fullName">Nama</label>
 
                                                         <input type="text"  value="Full Name here " class="form-control" id="fullName" placeholder="Enter full name"  readonly disabled>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
-                                                        <label for="eMail">Email</label>
+                                                        <label for="eMail">Username SSO</label>
                                                         <input type="email" class="form-control" id="eMail" placeholder="Enter email ID" readonly disabled>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
-                                                        <label for="phone">Phone</label>
-                                                        <input type="text" class="form-control" id="phone" placeholder="Enter phone number" readonly disabled>
+                                                        <label for="phone">Email</label>
+                                                        <input type="text" class="form-control" id="phone" placeholder="Enter email" readonly disabled>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
-                                                        <label for="website">Website URL</label>
-                                                        <input type="url" class="form-control" id="website" placeholder="Website url">
+                                                        <label for="website">Phone</label>
+                                                        <input type="url" class="form-control" id="website" placeholder="Phone" readonly disabled>
                                                     </div>
                                                 </div>
+
                                             </div>
                                             <div class="row gutters">
                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                                    <h6 class="mb-3 text-primary">Address</h6>
+                                                    <h6 class="mb-3 text-primary">Student Details</h6>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
-                                                        <label for="Street">Street</label>
-                                                        <input type="name" class="form-control" id="Street" placeholder="Enter Street">
+                                                        <label for="Street">Fakultas</label>
+                                                        <input type="name" class="form-control" id="Street" placeholder="Nama Fakultas" readonly disabled>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
-                                                        <label for="ciTy">City</label>
-                                                        <input type="name" class="form-control" id="ciTy" placeholder="Enter City">
+                                                        <label for="ciTy">Jurusan</label>
+                                                        <input type="name" class="form-control" id="ciTy" placeholder="Jurusan" readonly disabled>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
-                                                        <label for="sTate">State</label>
-                                                        <input type="text" class="form-control" id="sTate" placeholder="Enter State">
+                                                        <label for="sTate">Prodi</label>
+                                                        <input type="text" class="form-control" id="sTate" placeholder="Prodi" readonly disabled>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
-                                                        <label for="zIp">Zip Code</label>
-                                                        <input type="text" class="form-control" id="zIp" placeholder="Zip Code">
+                                                        <label for="zIp">Tanggal Lahir</label>
+                                                        <input type="text" class="form-control" id="zIp" placeholder="Tanggal lahir" readonly disabled>
                                                     </div>
                                                 </div>
-                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                                    <div class="form-group">
-                                                        <label for="zIp">Zip Code</label>
-                                                        <input type="text" class="form-control" id="zIp" placeholder="Zip Code">
-                                                    </div>
-                                                </div>
-                                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                                                    <div class="form-group">
-                                                        <label for="zIp">Zip Code</label>
-                                                        <input type="text" class="form-control" id="zIp" placeholder="Zip Code">
-                                                    </div>
-                                                </div>
+
+
                                             </div>
                                             <div class="row gutters">
                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
