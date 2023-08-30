@@ -22,6 +22,8 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', HomeController::class);
 Route::get('/users', [UserController::class, 'index'])->name('users');
+Route::get('/users/create', [UserController::class, 'create']);
+Route::post('/users/store', [UserController::class, 'store']);
 Route::get('/users/{id}', [UserController::class, 'show']);
 
 
