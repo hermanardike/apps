@@ -57,13 +57,14 @@
                                                     <div class="user-avatar">
                                                         <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="Maxwell Admin">
                                                     </div>
-                                                    <h5 class="user-name">Nama Mahasiswa</h5>
-                                                    <h6 class="user-email">npm mahasiswa</h6>
-                                                    <h6 class="user-email">Create At user</h6>
+                                                    <h5 class="user-name">{{$users->name}}</h5>
+                                                    <h6 class="user-email">{{$users->nip}}</h6>
+
+                                                    <h6 class="user-email">{{ \Carbon\Carbon::parse($users->created_at)->format('d F, Y') }}</h6>
                                                 </div>
                                                 <div class="about">
                                                     <h5 class="mb-2 text-primary">Alamat Pengguna</h5>
-                                                    <p>I'm Yuki. Full Stack Designer I enjoy creating user-centric, delightful and human experiences.</p>
+                                                    <p>{{$users->alamat}}</p>
                                                 </div>
 
 
@@ -71,66 +72,69 @@
                                         </div>
                                     </div>
                                 </div>
+
+
                                 <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
                                     <div class="card h-100">
                                         <div class="card-body">
                                             <div class="row gutters">
                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                                    <h6 class="mb-3 text-primary">Personal Details</h6>
+                                                    <h6 class="mb-3 text-primary">Account Details</h6>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
                                                         <label for="fullName">Nama</label>
 
-                                                        <input type="text"  value="Full Name here " class="form-control" id="fullName" placeholder="Enter full name"  readonly disabled>
+                                                        <input type="text"  value="{{$users->name}}" class="form-control" id="fullName" placeholder=""  readonly disabled>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
-                                                        <label for="eMail">Username SSO</label>
-                                                        <input type="email" class="form-control" id="eMail" placeholder="Enter email ID" readonly disabled>
+                                                        <label for="username">Username SSO</label>
+                                                        <input type="username" class="form-control" id="username" placeholder="{{$users->username}}" readonly disabled>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
                                                         <label for="phone">Email</label>
-                                                        <input type="text" class="form-control" id="phone" placeholder="Enter email" readonly disabled>
+                                                        <input type="text" class="form-control" id="phone" placeholder="{{$users->email}}" readonly disabled>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
                                                         <label for="website">Phone</label>
-                                                        <input type="url" class="form-control" id="website" placeholder="Phone" readonly disabled>
+                                                        <input type="url" class="form-control" id="website" placeholder="{{$users->telp}}" readonly disabled>
                                                     </div>
                                                 </div>
 
                                             </div>
                                             <div class="row gutters">
                                                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                                    <h6 class="mb-3 text-primary">Student Details</h6>
+                                                    <h6 class="mb-3 text-primary">Unit Details</h6>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
-                                                        <label for="Street">Fakultas</label>
-                                                        <input type="name" class="form-control" id="Street" placeholder="Nama Fakultas" readonly disabled>
+                                                        <label for="Street">Unit</label>
+                                                        <input type="name" class="form-control" id="Street" placeholder="{{$users->id_unit}}" readonly disabled>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
                                                         <label for="ciTy">Jurusan</label>
-                                                        <input type="name" class="form-control" id="ciTy" placeholder="Jurusan" readonly disabled>
+                                                        <input type="name" class="form-control" id="ciTy" placeholder="{{$users->id_jurusan}}" readonly disabled>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
                                                         <label for="sTate">Prodi</label>
-                                                        <input type="text" class="form-control" id="sTate" placeholder="Prodi" readonly disabled>
+                                                        <input type="text" class="form-control" id="sTate" placeholder="{{$users->id_prodi}}" readonly disabled>
                                                     </div>
                                                 </div>
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
                                                         <label for="zIp">Tanggal Lahir</label>
-                                                        <input type="text" class="form-control" id="zIp" placeholder="Tanggal lahir" readonly disabled>
+
+                                                        <input type="text" class="form-control" id="zIp" placeholder="{{ \Carbon\Carbon::parse($users->tgl_lahir)->format('d F, Y') }}" readonly disabled>
                                                     </div>
                                                 </div>
 

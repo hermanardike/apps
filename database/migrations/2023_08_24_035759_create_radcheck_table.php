@@ -21,12 +21,10 @@ return new class extends Migration
             $table->char('value',253);
             $table->string('nip', 25);
             $table->char('name',253);
-            $table->char('fname',253);
-            $table->char('lname',253);
             $table->date('tgl_lahir');
-            $table->string('id_fakultas', 2);
+            $table->string('id_unit', 2);
             $table->string('id_jurusan', 2);
-            $table->string('id_unitkerja', 2);
+            $table->string('id_prodi', 2);
             $table->string('id_status', 2);
             $table->text('alamat');
             $table->string('telp', 12);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use function Termwind\renderUsing;
 
 class UserController extends Controller
 {
@@ -15,13 +16,16 @@ class UserController extends Controller
             'user' => $user
         ]);
     }
-    public function show($user){
+    public function show($id){
 
         return view('users.show', [
-            'user' => $user
+            'users' => DB::table('radcheck')->find($id)
         ]);
-
     }
+
+
+
+
 
 
 

@@ -136,8 +136,9 @@
                             <td>{{$users->username}}</td>
                             <td>{{$users->email}}</td>
                             <td>{{$users->id_status}}</td>
-                            <td>
-                                <span class="badge bg-success">edit</span>
+                            <td><span class="badge bg-success"><a href="/users/{{$users->id}}">
+                                Readmore</a>
+                                </span>
                             </td>
                         </tr>
                         @endforeach
