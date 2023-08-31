@@ -54,20 +54,31 @@
                                 </div>
                                 <div class="card-content">
                                     <div class="card-body">
-                                        <form class="form">
+                                        @if ($errors->any())
+                                            <div class="alert alert-danger">
+                                                <p><strong>Opps Something went wrong</strong></p>
+                                                <ul>
+                                                    @foreach ($errors->all() as $error)
+                                                        <li>{{ $error }}</li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
+                                        @endif
+                                        <form class="form" method="post" action="/users">
+                                            @csrf
                                             <div class="row">
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
-                                                        <label for="first-name-column">Nama Lengkap </label>
+                                                        <label for="first-name-column" class="form-label">Nama Lengkap </label>
                                                         <input type="text" id="first-name-column" class="form-control"
-                                                               placeholder="Nama Lengkap" name="name">
+                                                               placeholder="Nama Lengkap" name="name" >
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="last-name-column">NIK atau NPM</label>
                                                         <input type="text" id="last-name-column" class="form-control"
-                                                               placeholder="Nomor Id User" name="nip">
+                                                               placeholder="Nomor Id User" name="nip" value="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
@@ -102,7 +113,7 @@
                                                     <label for="id_unit">Unit</label>
                                                     <div class="form-group" >
                                                         <select name="id_unit" class="choices form-select">
-                                                            <option value="square">Square</option>
+                                                            <option value="1">Square</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -110,7 +121,7 @@
                                                     <label for="id_jurusan">Jurusan</label>
                                                     <div class="form-group">
                                                         <select name="id_jurusan" class="choices form-select">
-                                                            <option value="square">Square</option>
+                                                            <option value="1">Square</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -118,7 +129,7 @@
                                                     <label for="id_prodi">Prodi</label>
                                                     <div class="form-group">
                                                         <select name="id_prodi" class="choices form-select">
-                                                            <option value="square">Square</option>
+                                                            <option value="1">Square</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -126,7 +137,7 @@
                                                     <label for="id_status">Status</label>
                                                     <div class="form-group">
                                                         <select name="id_status" class="choices form-select">
-                                                            <option value="square">Square</option>
+                                                            <option value="1">Square</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -136,7 +147,7 @@
                                                                 <div class="card-body">
                                                                     <div class="form-group mb-3">
                                                                         <label for="exampleFormControlTextarea1" class="form-label">Alamat Lengkap User</label>
-                                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+                                                                        <textarea name="alamat" class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
                                                                     </div>
                                                                 </div>
                                                             </div>

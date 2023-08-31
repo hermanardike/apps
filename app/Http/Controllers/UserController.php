@@ -30,7 +30,47 @@ class UserController extends Controller
 
     public function store(Request $request)
     {
-        dd('ok Masuk');
+        $request->validate([
+            'username' => ['required'],
+            'attribute' => ['required'],
+            'op' => ['required'],
+            'value' => ['required'],
+            'nip' => ['required'],
+            'name' => ['required'],
+            'tgl_lahir' => ['required'],
+            'id_unit' => ['required'],
+            'id_jurusan' => ['required'],
+            'id_prodi' => ['required'],
+            'id_status' => ['required'],
+            'kontak' => ['required'],
+            'email' => ['required'],
+            'created_at' => ['required'],
+            'updated_at' => ['required'],
+        ]);
+
+
+        DB::table('radcheck')->insert([
+
+            'username' => $request->username,
+            'attribute' => 'ClearPassword-Text',
+            'op' => ':=',
+            'value' => $request->value,
+            'nip' => $request->nip,
+            'name' => $request->name,
+            'tgl_lahir' => $request->tgl_lahir,
+            'id_unit' => $request->id_unit,
+            'id_jurusan' => $request->id_jurusan,
+            'id_prodi' => $request->id_prodi,
+            'id_status' => $request->id_status,
+            'alamat' => $request->alamat,
+            'kontak' => $request->kontak,
+            'email' => $request->email,
+            'created_at' => now(),
+            'updated_at' => now(),
+
+            ]);
+
+        return to_route('/users/create');
     }
 
 
