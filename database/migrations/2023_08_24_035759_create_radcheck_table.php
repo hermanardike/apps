@@ -29,6 +29,7 @@ return new class extends Migration
             $table->text('alamat');
             $table->string('telp', 12);
             $table->char('email',253);
+            $table->char('photo',253);
             $table->timestamps();
         });
     }

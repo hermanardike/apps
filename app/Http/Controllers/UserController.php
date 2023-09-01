@@ -16,12 +16,7 @@ class UserController extends Controller
             'user' => $user
         ]);
     }
-    public function show($id){
 
-        return view('users.show', [
-            'users' => DB::table('radcheck')->find($id)
-        ]);
-    }
 
     public function create()
     {
@@ -42,10 +37,9 @@ class UserController extends Controller
             'id_jurusan' => ['required'],
             'id_prodi' => ['required'],
             'id_status' => ['required'],
-            'kontak' => ['required'],
+            'telp' => ['required'],
             'email' => ['required'],
-            'created_at' => ['required'],
-            'updated_at' => ['required'],
+            'photo' => ['required']
         ]);
 
 
@@ -65,6 +59,7 @@ class UserController extends Controller
             'alamat' => $request->alamat,
             'kontak' => $request->kontak,
             'email' => $request->email,
+            'photo' => $request->photo,
             'created_at' => now(),
             'updated_at' => now(),
 
@@ -72,6 +67,33 @@ class UserController extends Controller
 
         return to_route('/users/create');
     }
+
+    public function edit(Request $request , $id){
+
+        return view('users.edit', [
+            'users' => DB::table('radcheck')->find($id)
+        ]);
+
+    }
+
+    public function update(Request $request, $id)
+    {
+        $users =  DB::table('radcheck')->find($id);
+        dd($users);
+
+    }
+
+
+    public function show($id){
+
+        return view('users.show', [
+            'users' => DB::table('radcheck')->find($id)
+        ]);
+    }
+
+
+
+
 
 
 

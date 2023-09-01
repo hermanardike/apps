@@ -9,19 +9,21 @@
                 <div class="row">
                     <div class="col-6 col-lg-3 col-md-6">
                         <div class="card">
+                            <a href="/users/ {{ $users->id }}/edit">
                             <div class="card-body px-4 py-4-5">
                                 <div class="row">
                                     <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
                                         <div class="stats-icon purple mb-2">
-                                            <i class="iconly-boldShow"></i>
+                                            <i class="iconly-boldEdit-Square"></i>
                                         </div>
                                     </div>
                                     <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                        <h6 class="text-muted font-semibold">Profile Views</h6>
-                                        <h6 class="font-extrabold mb-0">112.000</h6>
+                                        <h6 class="text-muted font-semibold">EDIT USER</h6>
+                                        <h6 class="font-extrabold mb-0">SSO</h6>
                                     </div>
                                 </div>
                             </div>
+                            </a>
                         </div>
                     </div>
 
@@ -32,11 +34,11 @@
                                 <div class="row">
                                     <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
                                         <div class="stats-icon red mb-2">
-                                            <i class="iconly-boldBookmark"></i>
+                                            <i class="iconly-boldUser"></i>
                                         </div>
                                     </div>
                                     <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                                        <h6 class="text-muted font-semibold">Saved Post</h6>
+                                        <h6 class="text-muted font-semibold">TOTAL USERS</h6>
                                         <h6 class="font-extrabold mb-0">112</h6>
                                     </div>
                                 </div>
@@ -103,7 +105,7 @@
                                                 <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
                                                     <div class="form-group">
                                                         <label for="website">Phone</label>
-                                                        <input type="url" class="form-control" id="website" placeholder="{{$users->kontak}}" readonly disabled>
+                                                        <input type="url" class="form-control" id="website" placeholder="{{$users->telp}}" readonly disabled>
                                                     </div>
                                                 </div>
 
@@ -140,14 +142,14 @@
 
 
                                             </div>
-                                            <div class="row gutters">
-                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                                    <div class="text-right">
-                                                        <button type="button" id="submit" name="submit" class="btn btn-secondary">Cancel</button>
-                                                        <button type="button" id="submit" name="submit" class="btn btn-primary">Update</button>
-                                                    </div>
-                                                </div>
-                                            </div>
+{{--                                            <div class="row gutters">--}}
+{{--                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">--}}
+{{--                                                    <div class="text-right">--}}
+{{--                                                        <button type="button" id="submit" name="submit" class="btn btn-secondary">Cancel</button>--}}
+{{--                                                        <button type="button" id="submit" name="submit" class="btn btn-primary">Update</button>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
                                         </div>
                                     </div>
                                 </div>

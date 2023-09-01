@@ -25,6 +25,7 @@
                         </div>
                     </div>
 
+                    @dd($users)
 
                     <div class="col-6 col-lg-3 col-md-6">
                         <div class="card">
@@ -149,18 +150,18 @@
                                                         </select>
                                                     </div>
                                                 </div>
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <div class="card">
-                                                                <div class="card-body">
-                                                                    <div class="form-group mb-3">
-                                                                        <label for="exampleFormControlTextarea1" class="form-label">Alamat Lengkap User</label>
-                                                                        <textarea name="alamat" class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
-                                                                    </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="card">
+                                                            <div class="card-body">
+                                                                <div class="form-group mb-3">
+                                                                    <label for="exampleFormControlTextarea1" class="form-label">Alamat Lengkap User</label>
+                                                                    <textarea name="alamat" class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
+                                                </div>
                                                 <div class="form-group col-12">
                                                     <div class='form-check'>
                                                         <div class="checkbox">
@@ -170,11 +171,11 @@
                                                     </div>
                                                 </div>
 
-{{--                                                <select name="stuff_type">--}}
-{{--                                                    @foreach($stuff_types as $stuff_type)--}}
-{{--                                                        <option value="{{ $stuff_type->id }}">{{ $stuff_type->name}}</option>--}}
-{{--                                                    @endforeach--}}
-{{--                                                </select>--}}
+                                                {{--                                                <select name="stuff_type">--}}
+                                                {{--                                                    @foreach($stuff_types as $stuff_type)--}}
+                                                {{--                                                        <option value="{{ $stuff_type->id }}">{{ $stuff_type->name}}</option>--}}
+                                                {{--                                                    @endforeach--}}
+                                                {{--                                                </select>--}}
                                                 <div class="col-12 d-flex justify-content-end">
                                                     <button type="submit" class="btn btn-primary me-1 mb-1">Submit</button>
                                                     <button type="reset" class="btn btn-light-secondary me-1 mb-1">Reset</button>
