@@ -1,7 +1,7 @@
-<x-app-layout title="Tambah User SSO">
+<x-app-layout title="Edit User SSO">
 
     <div class="page-heading">
-        <h3>Create User SSO</h3>
+        <h3>Edit User SSo</h3>
     </div>
     <div class="page-content">
         <section class="row">
@@ -13,7 +13,7 @@
                                 <div class="row">
                                     <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
                                         <div class="stats-icon purple mb-2">
-                                            <i class="iconly-boldShow"></i>
+                                            <i class="iconly-boldEdit"></i>
                                         </div>
                                     </div>
                                     <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
@@ -25,7 +25,6 @@
                         </div>
                     </div>
 
-                    @dd($users)
 
                     <div class="col-6 col-lg-3 col-md-6">
                         <div class="card">
@@ -65,21 +64,22 @@
                                                 </ul>
                                             </div>
                                         @endif
-                                        <form class="form" method="post" action="/users">
+                                        <form class="form" method="post" action="/users/{{$users->id}}">
                                             @csrf
+                                            @method('put')
                                             <div class="row">
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="first-name-column" class="form-label">Nama Lengkap </label>
                                                         <input type="text" id="first-name-column" class="form-control"
-                                                               placeholder="Nama Lengkap" name="name" >
+                                                               placeholder="Nama Lengkap" name="name"  value="{{$users->name}}">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="last-name-column">NIK atau NPM</label>
                                                         <input type="text" id="last-name-column" class="form-control"
-                                                               placeholder="Nomor Id User" name="nip" value="">
+                                                               placeholder="Nomor Id User" name="nip" value="{{$users->nip}}">
                                                     </div>
                                                 </div>
 
@@ -87,42 +87,42 @@
                                                     <div class="form-group">
                                                         <label for="">Email</label>
                                                         <input type="email-id-column" id="email" class="form-control" placeholder="email user"
-                                                               name="email">
+                                                               name="email" value="{{$users->email}}">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="last-name-column">Username</label>
                                                         <input type="text" id="last-name-column" class="form-control"
-                                                               placeholder="Masukan Username " name="username" >
+                                                               placeholder="Masukan Username " name="username" value="{{$users->username}}">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="password">Password</label>
                                                         <input type="password" id="country-floating" class="form-control"
-                                                               name="value" placeholder="Password">
+                                                               name="value" placeholder="Password" value="{{$users->value}}">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="kontak">Kontak</label>
                                                         <input type="text" id="company-column" class="form-control"
-                                                               name="kontak" placeholder="Nomor Telp ">
+                                                               name="telp" placeholder="Nomor Telp " value="{{$users->telp}}">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
                                                     <div class="form-group">
                                                         <label for="tanggal-lahir">Tanggal Lahir</label>
                                                         <input type="date" id="date" class="form-control"
-                                                               name="tgl_lahir" placeholder="Tanggal Lahir">
+                                                               name="tgl_lahir" placeholder="Tanggal Lahir" value="{{$users->tgl_lahir}}">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 mb-4">
                                                     <label for="id_unit">Unit</label>
                                                     <div class="form-group" >
                                                         <select name="id_unit" class="choices form-select">
-                                                            <option value="1">Square</option>
+                                                            <option value="{{$users->id_unit}}">Square</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -130,7 +130,7 @@
                                                     <label for="id_jurusan">Jurusan</label>
                                                     <div class="form-group">
                                                         <select name="id_jurusan" class="choices form-select">
-                                                            <option value="1">Square</option>
+                                                            <option value="{{$users->id_jurusan}}">Square</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -138,7 +138,7 @@
                                                     <label for="id_prodi">Prodi</label>
                                                     <div class="form-group">
                                                         <select name="id_prodi" class="choices form-select">
-                                                            <option value="1">Square</option>
+                                                            <option value="{{$users->id_prodi}}">Square</option>
                                                         </select>
                                                     </div>
                                                 </div>
@@ -146,8 +146,16 @@
                                                     <label for="id_status">Status</label>
                                                     <div class="form-group">
                                                         <select name="id_status" class="choices form-select">
-                                                            <option value="1">Square</option>
+                                                            <option value="{{$users->id_status}}">Square</option>
                                                         </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6 col-12">
+                                                    <div class="form-group">
+                                                        <label for="last-name-column">Photo</label>
+                                                        <input type="text" id="last-name-column" class="form-control"
+                                                               placeholder="Nomor Id User" name="photo" value="User Photo">
                                                     </div>
                                                 </div>
                                                 <div class="row">
@@ -156,7 +164,7 @@
                                                             <div class="card-body">
                                                                 <div class="form-group mb-3">
                                                                     <label for="exampleFormControlTextarea1" class="form-label">Alamat Lengkap User</label>
-                                                                    <textarea name="alamat" class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+                                                                    <textarea name="alamat" class="form-control" id="exampleFormControlTextarea1" rows="8" >{{$users->alamat}}</textarea>
                                                                 </div>
                                                             </div>
                                                         </div>

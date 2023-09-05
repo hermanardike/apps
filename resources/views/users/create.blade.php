@@ -13,7 +13,7 @@
                                 <div class="row">
                                     <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
                                         <div class="stats-icon purple mb-2">
-                                            <i class="iconly-boldShow"></i>
+                                            <i class="iconly-boldEdit"></i>
                                         </div>
                                     </div>
                                     <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
@@ -107,7 +107,7 @@
                                                     <div class="form-group">
                                                         <label for="kontak">Kontak</label>
                                                         <input type="text" id="company-column" class="form-control"
-                                                               name="kontak" placeholder="Nomor Telp ">
+                                                               name="telp" placeholder="Nomor Telp ">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6 col-12">
@@ -147,6 +147,14 @@
                                                         <select name="id_status" class="choices form-select">
                                                             <option value="1">Square</option>
                                                         </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6 col-12">
+                                                    <div class="form-group">
+                                                        <label for="kontak">Kontak</label>
+                                                        <input type="text" id="company-column" class="form-control"
+                                                               name="photo" placeholder="Upload Photo ">
                                                     </div>
                                                 </div>
                                                     <div class="row">
