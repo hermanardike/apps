@@ -139,9 +139,10 @@
                             <td>{{$users->email}}</td>
                             <td>{{$users->id_status}}</td>
                             <td><span class="badge bg-success" ><a href="/users/{{$users->id}}">
-                                <i class="iconly-boldEdit"></i></a>
+                                <i class="iconly-boldShow"></i></a>
                                 </span>
                             </td>
+
                         </tr>
                         @endforeach
 

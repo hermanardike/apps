@@ -13,9 +13,7 @@
                             <div class="card-body px-4 py-4-5">
                                 <div class="row">
                                     <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-                                        <div class="stats-icon purple mb-2">
-                                            <i class="iconly-boldEdit-Square"></i>
-                                        </div>
+                                        <button type="submit" class="btn btn-outline-success">Edit</button>
                                     </div>
                                     <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                                         <h6 class="text-muted font-semibold">EDIT USER</h6>
@@ -32,10 +30,16 @@
                         <div class="card">
                             <div class="card-body px-4 py-4-5">
                                 <div class="row">
+
                                     <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
-                                        <div class="stats-icon red mb-2">
-                                            <i class="iconly-boldUser"></i>
-                                        </div>
+                                        <form action="/users/{{$users->id}}" method="post">
+                                            @csrf
+                                            @method('delete')
+                                        <button type="submit" class="btn btn-outline-danger">Hapus</button>
+{{--                                        <div class="stats-icon red mb-2">--}}
+{{--                                            <i class="iconly-boldUser"></i>--}}
+{{--                                        </div>--}}
+                                        </form>
                                     </div>
                                     <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
                                         <h6 class="text-muted font-semibold">TOTAL USERS</h6>
@@ -142,14 +146,15 @@
 
 
                                             </div>
-{{--                                            <div class="row gutters">--}}
-{{--                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">--}}
-{{--                                                    <div class="text-right">--}}
+                                            <div class="row gutters">
+                                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                                    <div class="text-right">
+
 {{--                                                        <button type="button" id="submit" name="submit" class="btn btn-secondary">Cancel</button>--}}
 {{--                                                        <button type="button" id="submit" name="submit" class="btn btn-primary">Update</button>--}}
-{{--                                                    </div>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
