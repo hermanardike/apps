@@ -1,22 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use function Termwind\renderUsing;
+use App\Models\Radcheck;
 
 class UserController extends Controller
 {
     public function index(){
-
-        $user = DB::table('radcheck')->get();
-
         return view('users.index', [
-            'user' => $user
+            'user' => Radcheck::get()
         ]);
     }
-
 
     public function create()
     {
@@ -27,8 +21,6 @@ class UserController extends Controller
     {
         $request->validate([
             'username' => ['required'],
-//            'attribute' => ['required'],
-//            'op' => ['required'],
             'value' => ['required'],
             'nip' => ['required'],
             'name' => ['required'],
@@ -57,37 +49,30 @@ class UserController extends Controller
             ]);
 
 
-        DB::table('radcheck')->insert([
-
-            'username' => $request->username,
-            'attribute' => 'ClearPassword-Text',
-            'op' => ':=',
-            'value' => $request->value,
-            'nip' => $request->nip,
-            'name' => $request->name,
-            'tgl_lahir' => $request->tgl_lahir,
-            'id_unit' => $request->id_unit,
-            'id_jurusan' => $request->id_jurusan,
-            'id_prodi' => $request->id_prodi,
-            'id_status' => $request->id_status,
-            'alamat' => $request->alamat,
-            'telp' => $request->telp,
-            'email' => $request->email,
-            'photo' => $request->photo,
-            'created_at' => now(),
-            'updated_at' => now(),
-
-            ]);
-
+        $users =  new Radcheck();
+        $users->username    = $request->username;
+        $users->attribute   = 'ClearPassword-Text';
+        $users->op          = ':=';
+        $users->value       = $request->value;
+        $users->nip         = $request->nip;
+        $users->name        = $request->name;
+        $users->tgl_lahir   = $request->tgl_lahir;
+        $users->id_unit     = $request->id_unit;
+        $users->id_jurusan  = $request->id_jurusan;
+        $users->id_prodi    = $request->id_prodi;
+        $users->id_status   = $request->id_status;
+        $users->alamat      = $request->alamat;
+        $users->telp        = $request->telp;
+        $users->email       = $request->email;
+        $users->photo       = $request->photo;
+        $users->save();
         return redirect('/users/create');
     }
 
     public function edit(Request $request , $id){
-
         return view('users.edit', [
-            'users' => DB::table('radcheck')->find($id)
+            'users' => Radcheck::find($id)
         ]);
-
     }
 
     public function update(Request $request, $id)
@@ -124,28 +109,23 @@ class UserController extends Controller
                 'alamat' => 'Alamat User Wajib Diisi',
             ]);
 
-        $users =  DB::table('radcheck')->where('id', $id)->first();
-
-        DB::table('radcheck')->where('id', $id)->update([
-            'username' => $request->username,
-            'attribute' => 'ClearPassword-Text',
-            'op' => ':=',
-            'value' => $request->value,
-            'nip' => $request->nip,
-            'name' => $request->name,
-            'tgl_lahir' => $request->tgl_lahir,
-            'id_unit' => $request->id_unit,
-            'id_jurusan' => $request->id_jurusan,
-            'id_prodi' => $request->id_prodi,
-            'id_status' => $request->id_status,
-            'alamat' => $request->alamat,
-            'telp' => $request->telp,
-            'email' => $request->email,
-            'photo' => $request->photo,
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
-
+        $users = Radcheck::where('id', $id)->first();
+        $users->username    = $request->username;
+        $users->attribute   = 'ClearPassword-Text';
+        $users->op          = ':=';
+        $users->value       = $request->value;
+        $users->nip         = $request->nip;
+        $users->name        = $request->name;
+        $users->tgl_lahir   = $request->tgl_lahir;
+        $users->id_unit     = $request->id_unit;
+        $users->id_jurusan  = $request->id_jurusan;
+        $users->id_prodi    = $request->id_prodi;
+        $users->id_status   = $request->id_status;
+        $users->alamat      = $request->alamat;
+        $users->telp        = $request->telp;
+        $users->email       = $request->email;
+        $users->photo       = $request->photo;
+        $users->save();
         return redirect("/users/{$users->id}");
     }
 
@@ -153,13 +133,13 @@ class UserController extends Controller
     public function show($id){
 
         return view('users.show', [
-            'users' => DB::table('radcheck')->find($id)
+            'users' => Radcheck::find($id)
         ]);
     }
 
     public function destroy($id)
     {
-        DB::table('radcheck')->delete($id);
+        Radcheck::find($id)->delete();
         return redirect('/users');
     }
 
